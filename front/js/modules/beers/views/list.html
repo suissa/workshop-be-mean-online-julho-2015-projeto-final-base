@@ -1,0 +1,26 @@
+<h2>Listagem das cervejas</h2>
+
+<p class="msg">
+  {{ msg }}
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Remove</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr data-ng-repeat='beer in beers'>
+      <td>
+        <a href="#/beers/{{ beer._id }}">{{ beer.name }}</a>
+      </td>
+      <td>{{ beer.price }}</td>
+      <td>
+        <a data-ng-click="remove(beer)">X</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
